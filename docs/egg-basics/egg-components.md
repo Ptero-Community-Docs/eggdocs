@@ -38,7 +38,7 @@ Example: ``^C``
 ### Log Configuration
 
 ### Configuration Files
-Here you can set up configs the game or service will use and make them modifiable using the [Config Parser]().
+Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](https://example.com).
 
 This is generally recommended for advanced users and not very advisable for newcomers to making eggs.
 
