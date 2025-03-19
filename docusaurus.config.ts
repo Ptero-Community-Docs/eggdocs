@@ -79,7 +79,7 @@ const config: Config = {
           items: [
             {
               label: 'Egg Basics',
-              to: '/docs/intro',
+              to: '/docs/getting-started',
             },
           ],
         },
