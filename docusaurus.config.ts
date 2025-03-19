@@ -60,9 +60,23 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'gettingStartedSidebar',
+          position: 'left',
+          label: 'Getting Started',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'basicSidebar',
           position: 'left',
           label: 'Egg Basics',
+          to: '/docs/category/egg-basics',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'advancedSidebar',
+          position: 'left',
+          label: 'Advanced Egg Scripting',
+          to: '/docs/category/advanced-egg-scripting',
         },
         {
           href: 'https://github.com/itzminey/pterodocs',
@@ -78,9 +92,17 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Egg Basics',
+              label: 'Getting Started',
               to: '/docs/getting-started',
             },
+            {
+              label: 'Egg Basics',
+              to: '/docs/category/egg-basics',
+            },
+            {
+              label: 'Advanced Egg Scripting',
+              to: '/docs/category/advanced-egg-scripting',
+            }
           ],
         },
         {
