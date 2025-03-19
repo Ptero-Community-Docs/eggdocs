@@ -1,0 +1,8 @@
+{
+  "label": "Egg Basics",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Let's discover the basics of working with Pterodactyl's Egg System."
+  }
+}
