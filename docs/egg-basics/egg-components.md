@@ -18,6 +18,10 @@ This tab has some very important base info and configs about your egg in it.
 **Author** - Your E-Mail that end users can contact you with for support with the egg
 
 ### Docker Images
+:::caution
+This image will need to have all the packages your egg needs to run! Packages installed during the install script are only available during the install!
+:::
+
 Here you can select the base image the container will run, there are various images already available from the pterodactyl team in their [yolks repository](https://github.com/pterodactyl/yolks).
 
 You can also add multiple images, one per line, as well as add a display name. Example: ``Display Name|ghcr.io/my/egg``
