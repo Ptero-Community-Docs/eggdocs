@@ -2,6 +2,7 @@
   "label": "Advanced Egg Scripting",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "These are some more advanced areas of working with Pterodactyl Eggs that should be attempted only after you've already gotten a bit famimliar with the Egg system"
   }
 }

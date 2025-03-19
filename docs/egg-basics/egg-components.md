@@ -10,6 +10,8 @@ These are very important to have a general understanding of for making your own 
 # Configuration Tab
 This tab has some very important base info and configs about your egg in it.
 
+![Configuration Tab](img/config-tab.png)
+
 ## Basic Details
 **Name** - This is the name of your Egg
 
@@ -42,7 +44,7 @@ Example: ``^C``
 ### Log Configuration
 
 ### Configuration Files
-Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](https://example.com).
+Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](../egg-advanced/config-parser.md).
 
 This is generally recommended for advanced users and not very advisable for newcomers to making eggs.
 
@@ -60,3 +62,14 @@ Example:
 
 # Variables Tab
 This is where you can define new custom Variables, see [Egg Basics - Custom Variables](egg-variables#custom-variables) for more info on that topic.
+
+![Variables Tab](img/variables-tab.png)
+
+# Install Script Tab
+Here is where you can write your [Install Script](install-script.md) in bash and define the script container/docker image your script will run in
+
+:::caution
+Any Packages installed in the script container will be removed after installation is complete! Make sure all needed packages are in your docker image in the configuration tab as stated above!
+:::
+
+![Install Script Tab](img/install-script-tab.png)
