@@ -22,12 +22,12 @@
   justify-content: center;
 }
 
-main {
+.homepagecontent {
   display: block;
   align-content: center;
   text-align: center;
 }
 
-main h1 {
+.homepagecontent h1 {
   margin-top: 50px;
 }

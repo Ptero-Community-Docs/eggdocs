@@ -36,11 +36,13 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
         <main>
-            <h1>Welcome to the Pterodactyl Egg Documentation!</h1>
-            <p>
-                This is an <strong>unofficial</strong> documentation for the Pterodactyl Egg system, created by voluntary contributors to fill the gap in official resources.<br/>
-                Our goal is to provide clear and comprehensive guidance for managing and creating Eggs within the Pterodactyl panel.
-            </p>
+            <div className={styles.homepagecontent}>
+                <h1>Welcome to the Pterodactyl Egg Documentation!</h1>
+                <p>
+                    This is an <strong>unofficial</strong> documentation for the Pterodactyl Egg system, created by voluntary contributors to fill the gap in official resources.<br/>
+                    Our goal is to provide clear and comprehensive guidance for managing and creating Eggs within the Pterodactyl panel.
+                </p>
+            </div>
         </main>
 
     </Layout>
