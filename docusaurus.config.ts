@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/itzminey/pterodocs/tree/master/packages/create-docusaurus/templates/shared/',
+            'https://github.com/itzminey/pterodocs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
