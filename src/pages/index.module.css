@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+main {
+  display: block;
+  align-content: center;
+  text-align: center;
+}
+
+main h1 {
+  margin-top: 50px;
+}
