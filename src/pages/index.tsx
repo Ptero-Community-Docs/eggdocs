@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Homepage"
-      description="Description will go into a meta tag in <head />">
+      description="Unofficial Documentation for the Pterodactyl Egg system">
       <HomepageHeader />
         <main>
             <div className={styles.homepagecontent}>
