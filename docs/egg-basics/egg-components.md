@@ -53,7 +53,9 @@ This section is for a JSON string telling the egg where log files are stored, an
 ### Configuration Files
 Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](../egg-advanced/config-parser.md).
 
+:::caution
 This is generally recommended for advanced users and not very advisable for newcomers to making eggs.
+:::
 
 ### Startup Configuration
 This is a json string of words or phrases that the Wings service will look for in the console output of your egg in order to determine if it finished starting up or not.
