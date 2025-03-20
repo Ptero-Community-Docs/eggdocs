@@ -29,4 +29,4 @@ These can also be used in the config parse as so: ``{{server.build.default.VARIA
 
 ## Custom Variables
 
-You can also create additional Variables to use in your script in the Variables Tab, like default variables you can reference them in your script or config parser the same way but using ``env`` instead of ```default` as their are not default variables.
+You can also create additional Variables to use in your script in the Variables Tab, like default variables you can reference them in your script or config parser the same way but using ``env`` instead of ``default`` as they are not default variables.
