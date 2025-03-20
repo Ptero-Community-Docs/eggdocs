@@ -27,8 +27,6 @@ These can also be used in the config parse as so: ``{{server.build.default.VARIA
 | USER 	                    | User that executes the startup command in the server      | 	container        |
 | HOME                      | 	Home path of the container user                          | 	/home/container  |
 
-<sup>**Source:** Pterodox (https://pterodox.com/other/eggVariables.html#default-egg-variables-2)</sup>
-
 ## Custom Variables
 
 You can also create additional Variables to use in your script in the Variables Tab, like default variables you can reference them in your script or config parser the same way but using ``env`` instead of ```default` as their are not default variables.
