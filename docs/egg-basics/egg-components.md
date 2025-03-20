@@ -26,7 +26,9 @@ This image will need to have all the packages your egg needs to run! Packages in
 
 Here you can select the base image the container will run, there are various images already available from the pterodactyl team in their [yolks repository](https://github.com/pterodactyl/yolks).
 
-You can also add multiple images, one per line, as well as add a display name. Example: ``Display Name|ghcr.io/my/egg``
+You can also add multiple images to let the user choose which image they want to run the egg in, one per line, as well as add a display name.
+
+Example: ``Display Name|ghcr.io/my/egg``
 
 ### Startup Command
 This is what command the container will run on each press of the Start button on the installed Server
@@ -42,6 +44,11 @@ This is the command the container will run if the end user presses the "Stop" bu
 Example: ``^C``
 
 ### Log Configuration
+:::info
+This section still needs some clarification, feel free to contribute!
+:::
+
+This section is for a JSON string telling the egg where log files are stored, and whether the daemon should be creating custom logs or not.
 
 ### Configuration Files
 Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](../egg-advanced/config-parser.md).
