@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://pterodocs.itz.sh',
+  url: 'https://docs.itz.sh',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'itzminey', // Usually your GitHub org/user name.
-  projectName: 'pterodocs', // Usually your repo name.
+  projectName: 'eggdocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/itzminey/pterodocs/tree/master/',
+            'https://github.com/itzminey/eggdocs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -79,7 +79,7 @@ const config: Config = {
           to: '/docs/category/advanced-egg-scripting',
         },
         {
-          href: 'https://github.com/itzminey/pterodocs',
+          href: 'https://github.com/itzminey/eggdocs',
           label: 'GitHub',
           position: 'right',
         },
