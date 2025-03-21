@@ -97,7 +97,3 @@ Used for `.xml` files with tag-based structures.
 Used for plain text files.
 - Replaces lines that start with the specified `match` value, not a specific property like the other five. Avoid using this parser if possible
 - Does not operate on keys, only raw lines.
-
-:::info
-This section still needs to be expanded, feel free to contribute!
-:::
