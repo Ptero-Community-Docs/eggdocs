@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import contributors from './contributors.json';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -79,6 +80,13 @@ const config: Config = {
           to: '/docs/category/advanced-egg-scripting',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'tutorialsSidebar',
+          position: 'right',
+          label: 'Tutorials',
+          to: '/docs/category/tutorials',
+        },
+        {
           href: 'https://github.com/itzminey/eggdocs',
           label: 'GitHub',
           position: 'right',
@@ -106,6 +114,15 @@ const config: Config = {
           ],
         },
         {
+          title: 'Tutorials',
+          items: [
+            {
+              label: 'Making your first Egg',
+              to: '/docs/tutorials/first-egg',
+            }
+          ],
+        },
+        {
           title: 'Other Pterodactyl Related Sites',
           items: [
             {
@@ -121,9 +138,16 @@ const config: Config = {
               href: 'https://discord.gg/pterodactyl',
             },
           ],
+        },
+        {
+          title: 'Contributors',
+          items: contributors.map((contributor: { name: string, profileUrl: string }) => ({
+            label: contributor.name,
+            href: contributor.profileUrl,
+          })),
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Michael Reisinger and Contributors. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ptero Egg Docs and Contributors. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
