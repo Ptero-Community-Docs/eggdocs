@@ -4,10 +4,6 @@ sidebar_position: 1
 
 # Config Parser
 
-:::danger
-This is generally recommended for advanced users and not very advisable for newcomers to making eggs.
-:::
-
 ## Format
 The **config parser** processes JSON-based definitions that dictate how the Pterodactyl Daemon manages configuration files.  
 
