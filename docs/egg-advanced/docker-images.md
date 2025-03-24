@@ -111,7 +111,7 @@ CMD ["/entrypoint.sh"]
 ```
 Uses `tini` to launch the container and execute the custom startup script.
 
-## Example `entrypoint.sh`
+## Example entrypoint.sh
 
 In order to complete this Dockerfile, we will need an entrypoint.sh file which tells Docker how to run this specific server type.
 
