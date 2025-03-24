@@ -10,11 +10,13 @@ This page can be found by navigating to the Admin Dashboard, towards the very bo
 ![Nests Screen](img/Nests.png)
 
 ## Creating a new Nest
-On the top right, you will see two buttons labeled "Import Egg" and "Create New"
+On the top right, you will see two buttons labeled **"Import Egg"** and **"Create New"**
+To create a new Nest, click the **"Create new"** button, Or select an existing Nest to manage it.
 
-Click the "Create New" button to start creating your new custom egg.
 
 ## Creating a new Egg
-Click the "Create New" button to make a new Nest or click into an existing Nest.  At the bottom of the Nest you can now make a new Egg using the "New Egg" button!
+To create an Egg, open an existing Nest.
+Then click the **"New Egg"** button at the bottom of the page.
 
 For more info check out the [Making your first Egg](../tutorials/first-egg.md) Tutorial.
+
