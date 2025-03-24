@@ -11,6 +11,7 @@ This page can be found by navigating to the Admin Dashboard, towards the very bo
 
 ## Creating a new Nest
 On the top right, you will see two buttons labeled **"Import Egg"** and **"Create New"**
+
 To create a new Nest, click the **"Create new"** button, Or select an existing Nest to manage it.
 
 
