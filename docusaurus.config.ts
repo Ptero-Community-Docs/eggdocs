@@ -80,13 +80,6 @@ const config: Config = {
           to: '/docs/category/advanced-egg-scripting',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialsSidebar',
-          position: 'right',
-          label: 'Tutorials',
-          to: '/docs/category/tutorials',
-        },
-        {
           href: 'https://github.com/itzminey/eggdocs',
           label: 'GitHub',
           position: 'right',
@@ -110,15 +103,6 @@ const config: Config = {
             {
               label: 'Advanced Egg Scripting',
               to: '/docs/category/advanced-egg-scripting',
-            }
-          ],
-        },
-        {
-          title: 'Tutorials',
-          items: [
-            {
-              label: 'Making your first Egg',
-              to: '/docs/tutorials/first-egg',
             }
           ],
         },

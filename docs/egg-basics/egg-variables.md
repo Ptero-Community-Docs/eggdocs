@@ -4,29 +4,69 @@ sidebar_position: 3
 
 # Egg Variables
 
-Each egg has Variables that you can use in either the **Egg Install script** or the **Config Parser**
+Each egg in Pterodactyl supports **Variables** that you can use in either the **Install Script** or the **Config Parser**. These variables provide a dynamic way to configure your server behavior and are highly useful for customization and modular egg design.
 
-These Variables can be very helpful for having dynamic values in your install script that can be easily modified by end users.
+Variables are divided into two main types:
+
+- **Default Variables**: Automatically injected by the panel and wings.
+- **Custom Variables**: Defined manually in the "Variables" tab of the egg.
 
 ## Default Variables
 
-This is a collection of all the default variables each Egg has, you can reference these in your script in this format: ``{{server.build.default.VARIABLE_NAME}}`` or just as ``${VARIABLE_NAME}``
+These are injected into every server environment by default and can be referenced using the following syntaxes:
 
-These can also be used in the config parse as so: ``{{server.build.default.VARIABLE_NAME}}``
+- In scripts: ``${VARIABLE_NAME}`` or ``{{server.build.default.VARIABLE_NAME}}``
+- In config parsers: ``{{server.build.default.VARIABLE_NAME}}``
 
-| Variable Name             | Description                                               | Example           |
-|---------------------------|-----------------------------------------------------------|-------------------|
-| TZ                        | Time Zone set from panels ``.env``                        | ``Etc/UTC``       |
-| STARTUP                   | Startup command of the egg 	                              | ./Process         |
-| SERVER_MEMORY             | 	Memory available for the server in MB                    | 	512              |
-| SERVER_IP                 | 	Default ip of the server                                 | 	127.0.0.1        |
-| SERVER_PORT               | 	Primary Server Port                                      | 	27015            |
-| P_SERVER_LOCATION 	       | Location of the server                                    | 	Example Location |
-| P_SERVER_UUID             | 	UUID of the server 	539fdca8-4a08-4551-a8d2-8ee5475b50d9 |
-| P_SERVER_ALLOCATION_LIMIT | 	Limit of allocations allowed for the server              | 	0.000000         |
-| USER 	                    | User that executes the startup command in the server      | 	container        |
-| HOME                      | 	Home path of the container user                          | 	/home/container  |
+| Variable Name             | Description                                                              | Example                  |
+|---------------------------|--------------------------------------------------------------------------|--------------------------|
+| `TZ`                      | Time Zone set in the panel's `.env` file                                 | `Etc/UTC`                |
+| `STARTUP`                 | The actual resolved startup command for the server                       | `./run.sh -arg1`         |
+| `SERVER_MEMORY`           | Allocated memory for the server in megabytes                             | `1024`                   |
+| `SERVER_IP`               | The IP address assigned to the primary allocation                        | `192.168.1.10`           |
+| `SERVER_PORT`             | The main port assigned to the server                                     | `27015`                  |
+| `P_SERVER_LOCATION`       | The name of the location (set by the admin in the panel)                 | `Amsterdam-01`           |
+| `P_SERVER_UUID`           | UUID of the server instance (used for tracking within Wings)             | `ab12cd34-5678-90ef-ghij-klmn12345678` |
+| `P_SERVER_ALLOCATION_LIMIT` | The maximum number of allocations available to this server (if set)    | `3`                      |
+| `USER`                    | The user executing processes inside the container                        | `container`              |
+| `HOME`                    | The home directory inside the container                                  | `/home/container`        |
+
+> These variables are especially useful when creating multi-purpose install scripts or handling conditional logic based on port, memory, or UUID.
 
 ## Custom Variables
 
-You can also create additional Variables to use in your script in the Variables Tab, like default variables you can reference them in your script or config parser the same way but using ``env`` instead of ``default`` as they are not default variables.
+In addition to defaults, you can define your own **Custom Variables** in the egg configuration under the "Variables" tab. These are used to allow users or admins to provide input or modify parameters without directly changing the startup command.
+
+They are referenced as:
+
+- In scripts: ``${ENV_VAR}`` or ``{{env.ENV_VAR}}``
+- In config parsers: ``{{env.ENV_VAR}}``
+
+Each custom variable allows you to define:
+- A default value
+- Description (shown to the user in the panel)
+- Rules (validation, required or not)
+- Whether it is viewable or editable by the user
+
+Example use in a config parser:
+```json
+{
+  "server.properties": {
+    "parser": "properties",
+    "find": {
+      "server-port": "{{server.build.default.SERVER_PORT}}",
+      "max-players": "{{env.MAX_PLAYERS}}"
+    }
+  }
+}
+```
+
+> With custom variables, you can make your egg fully customizable while hiding sensitive or complex settings from end-users.
+
+## Best Practices
+
+- Use **UPPERCASE** for all variable names.
+- Clearly document custom variables with helpful descriptions.
+- Avoid redefining default variable names as custom ones.
+- Use fallback values where applicable in scripts.
+- Always validate inputs if used in file paths, URLs, or commands.

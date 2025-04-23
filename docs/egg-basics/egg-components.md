@@ -45,8 +45,10 @@ Example: ``^C``
 This section still needs some clarification, feel free to contribute!
 :::
 
-This section is for a JSON string telling the egg where log files are stored, and whether the daemon should be creating custom logs or not.
-
+Logs are competely handeled by the daemon now and use the docker logs to output the complete output from the server. This can be set like below.
+```json
+{}
+```
 ### Configuration Files
 Here you can set up configs the game or service will use and make them modifiable using the [Config Parser](../egg-advanced/config-parser.md).
 
