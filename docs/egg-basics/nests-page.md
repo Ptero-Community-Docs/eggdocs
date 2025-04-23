@@ -21,5 +21,3 @@ To import an already existing egg, press the **"Import Egg"** button, choose whi
 To create an Egg, open an existing Nest.
 Then click the **"New Egg"** button at the bottom of the page.
 
-For more info check out the [Making your first Egg](../tutorials/first-egg.md) Tutorial.
-

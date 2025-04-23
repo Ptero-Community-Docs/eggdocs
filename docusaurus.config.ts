@@ -18,7 +18,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'itzminey', // Usually your GitHub org/user name.
+  organizationName: 'Ptero-Egg-Docs', // Usually your GitHub org/user name.
   projectName: 'eggdocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -41,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/itzminey/eggdocs/tree/master/',
+            'https://github.com/Ptero-Egg-Docs/eggdocs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -80,7 +80,7 @@ const config: Config = {
           to: '/docs/category/advanced-egg-scripting',
         },
         {
-          href: 'https://github.com/itzminey/eggdocs',
+          href: 'https://github.com/Ptero-Egg-Docs/eggdocs',
           label: 'GitHub',
           position: 'right',
         },
