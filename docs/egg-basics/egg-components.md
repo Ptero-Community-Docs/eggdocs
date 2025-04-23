@@ -41,10 +41,6 @@ This is the command the container will run if the end user presses the "Stop" bu
 Example: ``^C``
 
 ### Log Configuration
-:::info
-This section still needs some clarification, feel free to contribute!
-:::
-
 In Pterodactyl 1.x, log configuration is usually left empty, because Wings streams all container output by default, it looks like:
 ```json
 {}

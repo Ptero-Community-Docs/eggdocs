@@ -9,6 +9,9 @@ The install script is where the **egg magic** happens.
 Here, you define the commands that run during the **installation phase** to set up the environment, download necessary files, and prepare everything your application or game needs to run in the [runtime Docker image](egg-components.md#docker-images).  
 
 ## How It Works  
+:::caution  
+Anything installed **outside** `/mnt/server` (e.g., system packages installed with `apt`, `apk`, or `yum`) **will not persist** into the runtime container. If your application needs specific system dependencies, they must be included in the **runtime Docker image**.  
+:::
 
 When an egg is deployed, the install script runs **inside a temporary install container**, which is separate from the actual runtime environment. This script is responsible for:  
 
@@ -26,9 +29,6 @@ When an egg is deployed, the install script runs **inside a temporary install co
 4. **Installing additional dependencies** (if needed)  
    - If your install process requires extra tools (e.g., `git`, `unzip`), you can install them in the install container.  
 
-:::caution  
-Anything installed **outside** `/mnt/server` (e.g., system packages installed with `apt`, `apk`, or `yum`) **will not persist** into the runtime container. If your application needs specific system dependencies, they must be included in the **runtime Docker image**.  
-:::
 
 ### What Happens After Installation?  
 
