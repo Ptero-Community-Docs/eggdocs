@@ -54,7 +54,7 @@ Example use in a config parser:
   "server.properties": {
     "parser": "properties",
     "find": {
-      "server-port": "{{server.build.default.SERVER_PORT}}",
+      "server-port": "{{server.build.default.port}}",
       "max-players": "{{env.MAX_PLAYERS}}"
     }
   }

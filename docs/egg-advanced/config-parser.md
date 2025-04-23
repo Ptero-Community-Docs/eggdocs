@@ -2,24 +2,30 @@
 sidebar_position: 1
 ---
 
+
 # Config Parser
-
 ## Format
-The **config parser** processes JSON-based definitions that dictate how the Pterodactyl Daemon manages configuration files.  
+The **config parser** modifies (config) files when a server starts.
 
-It ensures that essential server settings are **defined, modified, and injected dynamically** before the server starts.
+This ensures that essential server settings are **defined**, **modified**, and **injected dynamically** before the server starts.
 
-### Here’s an example using the **properties** parser:
+## How It Works
+
+Pterodactyl will:
+- Load the file (e.g. `server.properties`)
+- Replace or insert key-value pairs
+- Save it before startup completes
+
+## Properties Example
+
 ```json
 {
-    "server.properties": {
-        "parser": "properties",
-        "find": {
-            "server-ip": "0.0.0.0",
-            "server-port": "{{server.build.default.port}}",
-            "query.port": "{{server.build.default.port}}"
-        }
-    }
+  "parser": "properties",
+  "find": {
+    "server-ip": "{{server.build.default.ip}}",
+    "server-port": "{{server.build.default.port}}",
+    "max-players": "{{env.MAX_PLAYERS}}"
+  }
 }
 ```
 In this example, we are parsing the `server.properties` file using the `properties` parser.
@@ -39,7 +45,7 @@ Each time the server starts, the Daemon checks the file:
 This ensures important settings are always in place and match the server's configuration, without requiring manual edits to the file.
 
 
-### Here’s an example using the **yaml** parser:
+## YAML Example with Wildcard
 
 ```json
 {
@@ -62,38 +68,14 @@ An advanced feature of this file configuration is the ability to define multiple
 
 
 In this case, we are looking for either 127.0.0.1 or localhost and replacing them with the docker interface defined in the configuration file using `{{config.docker.interface}}.`
-## Parser types
 
-### **properties**
-Used for `.properties` files like `server.properties`.
-- Follows the `VARIABLE=VALUE` format.
-- Comments must start with `#`.
-
-
-### **ini**
-Used for `.ini` files which may contain section headers and key-value pairs.
-- Keys are set within sections, created if missing.
-- Matches are defined using dot notation (e.g., `section.key`).
-
-### **yaml**
-Used for `.yaml` or `.yml` files.
-- Modifications are made using exact key paths.
-- Supports * notation
-
-### **json**
-Used for `.json` files.
-- Structured like YAML and treated similarly.
-- If a key does not exist, it will be added automatically.
-- Supports * notation
-
-
-### **xml**
-Used for `.xml` files with tag-based structures.
-- Supports dot notation (e.g., `root.child.key`) for tag targeting.
-- Automatically creates missing tags.
-- Wildcards are supported in tag paths.
-
-### **file**
-Used for plain text files.
-- Replaces lines that start with the specified `match` value, not a specific property like the other five. Avoid using this parser if possible
-- Does not operate on keys, only raw lines.
+## Parser Types
+The available Parser Types are:
+| Type | Description |
+|------|-------------|
+| `properties` | `.properties` files with key=value pairs |
+| `ini` | Supports `[sections]` and `key=value` pairs |
+| `yaml` | Handles nested keys, supports wildcards |
+| `json` | Parses full structure, adds missing keys |
+| `xml` | Can update attributes/values via xpath |
+| `file` | Simple find/replace by line content (avoid if possible) |
