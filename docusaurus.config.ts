@@ -20,7 +20,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Ptero-Egg-Docs', // Usually your GitHub org/user name.
   projectName: 'eggdocs', // Usually your repo name.
-  deploymentBranch: 'gh-pages'
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -78,7 +78,7 @@ const config: Config = {
           sidebarId: 'advancedSidebar',
           position: 'left',
           label: 'Egg Advanced',
-          to: '/docs/category/advanced-egg-scripting',
+          to: '/docs/category/egg-advanced',
         },
         {
           href: 'https://github.com/Ptero-Egg-Docs/eggdocs',
@@ -103,7 +103,7 @@ const config: Config = {
             },
             {
               label: 'Egg Advanced',
-              to: '/docs/category/advanced-egg-scripting',
+              to: '/docs/category/egg-advanced',
             }
           ],
         },
