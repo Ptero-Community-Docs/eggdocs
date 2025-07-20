@@ -7,6 +7,13 @@ sidebar_position: 2
 The [Ptero-Eggs yolks repository](https://github.com/Ptero-Eggs/yolks) provides a variety of Docker images (called yolks) specifically designed for use with Pterodactyl eggs.
 
 These images provide the necessary runtime environments for game servers, bots, utilities, databases, and other services.
+Pterodactyl eggs run within Docker containers. 
+The **Docker image** for an egg defines the base operating system and software environment available to the server. Choosing the right image is important:
+
+- Pterodactyl also maintains an official repository of images (called **Yolks**) covering many common games, languages, and services.
+- You may also use a [Custom Docker Image](docker-images.md) for unique requirements
+
+These images provide the necessary runtime environments for game servers, bots, utilities, databases, and other services.
 
 ## Categories of Yolks
 ### General Purpose
@@ -53,10 +60,10 @@ These images provide the necessary runtime environments for game servers, bots, 
 
 ## Architecture Support
 
-Most yolks support both `amd64` and `arm64` architectures. Always check the image documentation to confirm compatibility with your server hardware.
+- Most yolks support both `amd64` and `arm64` architectures. Always check the image documentation to confirm compatibility with your server hardware.
 
 ## Additional Resources
 
-- [Official Yolks by Pterodactyl](https://github.com/Ptero-Eggs/yolks)
+- If you’re not sure which image to use for your egg, start with one of the [Official Yolks by Pterodactyl](https://github.com/Ptero-Eggs/yolks)
 
 For information on building your own Docker image for use with Pterodactyl, see [Creating Your Own Docker Image](/docs/egg-advanced/docker-images.md).

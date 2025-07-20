@@ -11,6 +11,8 @@ Variables are divided into two main types:
 - **Default Variables**: Automatically injected by the panel and wings.
 - **Custom Variables**: Defined manually in the "Variables" tab of the egg.
 
+![Variables](img/variables-tab.png)
+
 ## Default Variables
 
 These are injected into every server environment by default and can be referenced using the following syntaxes:

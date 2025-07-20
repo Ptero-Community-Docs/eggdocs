@@ -6,8 +6,8 @@ import contributors from './contributors.json';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Ptero Egg Docs',
-  tagline: 'Pterosaurs are cool',
+  title: 'Pterodactyl Egg Docs',
+  tagline: 'Pterosaurs are cool, and so are you!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,7 +76,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'advancedSidebar',
           position: 'left',
-          label: 'Advanced Egg Scripting',
+          label: 'Egg Advanced',
           to: '/docs/category/advanced-egg-scripting',
         },
         {
@@ -101,7 +101,7 @@ const config: Config = {
               to: '/docs/category/egg-basics',
             },
             {
-              label: 'Advanced Egg Scripting',
+              label: 'Egg Advanced',
               to: '/docs/category/advanced-egg-scripting',
             }
           ],
@@ -124,7 +124,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Contributors',
+          title: 'Main Contributors',
           items: contributors.map((contributor: { name: string, profileUrl: string }) => ({
             label: contributor.name,
             href: contributor.profileUrl,

@@ -53,7 +53,10 @@ export default function Home(): ReactNode {
                     <p>
                         This is an <strong>unofficial</strong> documentation for the Pterodactyl Egg system, created by voluntary contributors to fill the gap in official resources.<br/>
                         Our goal is to provide clear and comprehensive guidance for managing and creating Eggs within the Pterodactyl panel.
-                    </p>
+        </p>
+        <p style={{ marginTop: '1em', color: '#c00', fontWeight: 'bold' }}>
+            This is still a work in progress!
+        </p>
                 </div>
             </main>
         </Layout>
