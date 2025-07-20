@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.itz.sh',
+  url: 'https://docs.eggify.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -77,7 +77,7 @@ const config: Config = {
           sidebarId: 'advancedSidebar',
           position: 'left',
           label: 'Egg Advanced',
-          to: '/docs/category/advanced-egg-scripting',
+          to: '/docs/category/egg-advanced',
         },
         {
           href: 'https://github.com/Ptero-Egg-Docs/eggdocs',
@@ -102,7 +102,7 @@ const config: Config = {
             },
             {
               label: 'Egg Advanced',
-              to: '/docs/category/advanced-egg-scripting',
+              to: '/docs/category/egg-advanced',
             }
           ],
         },
