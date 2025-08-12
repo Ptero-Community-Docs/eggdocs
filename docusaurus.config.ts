@@ -11,16 +11,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ptero-egg-docs.github.io',
+  url: 'https://docs.eggify.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Ptero-Egg-Docs', // Usually your GitHub org/user name.
+  organizationName: 'Ptero-Community-Docs', // Usually your GitHub org/user name.
   projectName: 'eggdocs', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -42,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Ptero-Egg-Docs/eggdocs/tree/master/',
+            'https://github.com/Ptero-Community-Docs/eggdocs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -81,7 +80,7 @@ const config: Config = {
           to: '/docs/category/egg-advanced',
         },
         {
-          href: 'https://github.com/Ptero-Egg-Docs/eggdocs',
+          href: 'https://github.com/Ptero-Community-Docs/eggdocs',
           label: 'GitHub',
           position: 'right',
         },

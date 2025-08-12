@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 
-const owner = "Ptero-Egg-Docs";
+const owner = "Ptero-Community-Docs";
 const repo = "eggdocs";
 const url = `https://api.github.com/repos/${owner}/${repo}/contributors`;
 
